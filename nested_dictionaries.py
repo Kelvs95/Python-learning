@@ -50,3 +50,6 @@ for name, languages in p_languages.items():
     print(f"{name.title()}'s favorite languages are:")
     for language in languages:
         print(f"{language.title()}")
+
+
+# Dictionary in a Dictionary
