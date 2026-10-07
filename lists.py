@@ -82,3 +82,36 @@ print(phones1[-3])
 
 #finding the length of a list
 print(len(phones))
+
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Using enumerate ()
+courses = ["physics", "biology", "chemistry", "agric"]
+for index, course in enumerate(courses):
+    print(f" Course #{index}: {course.title()}")
+
+subjects = ['History', 'Music', 'Physics']
+for i, subject in enumerate(subjects, start=1):
+    if i == 2: print(f"The second subject is {subject}")
+
+
+#~~~~~~~~~~~~~~~~ LIST COMPREHENSIONS ~~~~~~~~~~~~~~~~~~~~~~~~~
+#Traditional code
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+evens = []
+for x in numbers:
+    if x % 2 == 0:
+        evens.append(x)
+
+print(evens)
+
+#List Comprehensions
+evens = [x for x in numbers if x % 2 == 0]
+print(evens)
+
+temperatures = [68, 75, 52, 81, 49, 90]
+temps = [x for x in temperatures if x >= 70]
+print(temps)
+
+new_list = [i*i for i in range(10) if i % 2 == 0]
+print(new_list)

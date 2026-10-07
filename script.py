@@ -66,3 +66,5 @@ for question, correct_answer in questions:
         score += 1
 
 print(f"You scored {score} out of {len(questions)}")
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~`
