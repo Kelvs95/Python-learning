@@ -132,4 +132,68 @@ for names in no_poll_yet:
     else:
         print(f"\n {names.title()}, please take the poll.")
 
+my_matrix = [[10, 20, 30], [40, 50, 60], [70, 80, 90]]
+print(my_matrix[1][2])
 
+total = 0
+matrix = [[10, 20], [30, 40]]
+for row in matrix:
+    for element in row:
+        total += element
+
+print(total)
+
+# Searching for a specific value in a matrix
+found = False
+search_value = 5
+matrix1 = [[1, 8], [9, 5]]
+for row in matrix1:
+    for element in row:
+        if element == search_value:
+            found = True
+            break
+print(found)
+
+matrix = [ [5, 12, 17, 2], [8, 3, 10, 11], [20, 6, 9, 1] ]
+count = 0
+for row in matrix:
+    for element in row:
+        if element > 10:
+            count += 1
+print(count)
+
+matrix = [[1, 2, 3], [4, 5, 6]]
+for row in matrix:
+    for i in range(len(row)):
+        #print(row[i])
+        row[i] = row[i] * 2
+
+print(matrix)
+
+matrix = [[1, 2, 3], [4, 5, 6]]
+filtered_matrix = []
+for row in matrix:
+    newrow = []
+    for item in row:
+        if item % 2 == 0:
+            newrow.append(item)
+    print(newrow)
+    if newrow:
+        filtered_matrix.append(newrow)
+print(filtered_matrix)
+
+#Sales total
+
+sales_data = [ {'region': 'North', 'amount': 100},
+               {'region': 'South', 'amount': 200},
+               {'region': 'North', 'amount': 150} ]
+regional_totals = {}
+for record in sales_data:
+    region = record['region']
+    amount = record['amount']
+    if region in regional_totals:
+        regional_totals[region] += amount
+    else:
+        regional_totals[region] = amount
+
+print(regional_totals)

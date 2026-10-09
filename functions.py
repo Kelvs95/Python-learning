@@ -38,4 +38,5 @@ def scope_test():
     print("inside function:", value)
 scope_test()
 print("outside function:", value)
+print(f"Outside function: {value}")
 
