@@ -1,5 +1,6 @@
 # In Python, square brackets ([]) indicate a list, and individual elements
 # in the list are separated by commas.
+#from script import quantity
 
 bicycles = ['trek', 'cannondale', 'redline', 'specialized']
 print(bicycles)
@@ -115,3 +116,63 @@ print(temps)
 
 new_list = [i*i for i in range(10) if i % 2 == 0]
 print(new_list)
+
+#List slicing
+s = 'programming'
+print(s[::3])
+print(s[1:9:2])
+print(s[::-1])
+print(s[7::-2])
+print(s[4:9:1])
+
+data = "0123456789"
+print(data[8:1:-2])
+
+# F- String
+username = "Alex"
+user_role = "Admin"
+message = f"User '{username}' has the role {user_role}"
+print(message)
+
+order_id = 101
+quantity = 3
+price = 25
+message1= (f"Order #{order_id}: {quantity} "
+           f"items for a total of ${price * quantity:.2f}")
+print(message1)
+
+# .format() method
+greeting = "Hello, {}!, Welcome to {}"
+print(greeting.format("Learner", "Python"))
+
+# .find()
+text = "hello world"
+position = text.find("o")
+print(position)
+
+report = "Customer ID: [CUSTID], Order ID: [ORDERID]"
+final_report = report.replace("[CUSTID]",
+                              "C4815").replace("[ORDERID]",
+                                               "O9263")
+print(final_report)
+
+# Split() method is a good method of preparing texts for analysis
+sentence = "This is a sample sentence."
+print(sentence.split())
+
+fruit = "Apple, 0.50, fruit"
+print(fruit.split(","))
+
+record = "2023-11-15,LOGIN,user_jane,SUCCESS"
+record_user = record.split(",")[2]
+print(record_user)
+
+my_string = 'hello, world'
+print(my_string[7:12])
+
+s = "user:john doe"
+print(s.upper().replace(":", ":-").replace(" ", "-"))
+
+data = '1,2,3,4,5'
+print(data.split(","))
+
