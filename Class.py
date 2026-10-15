@@ -39,3 +39,7 @@ dog2 = Dog("Buddy")
 
 dog1.speak() # Output: Fido says woof! dog2.speak() #
 dog2.speak()
+
+
+for x in range(5, 10):
+    print(x)
