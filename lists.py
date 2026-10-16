@@ -176,3 +176,26 @@ print(s.upper().replace(":", ":-").replace(" ", "-"))
 data = '1,2,3,4,5'
 print(data.split(","))
 
+#LAMBDA
+
+celsius_temps = [0, 10, 20, 30, 40]
+farenheit_temps = list(map(lambda c : (c * 9) / 5 + 32, celsius_temps))
+print(f"The fehrenheit equivalent of the "
+      f"celcius tenmperatures are: \n {farenheit_temps}")
+
+x = [32.0, 102, 96.80, 147.8]
+new_x = list(filter(lambda x : x > 100.0, x))
+for x_o in x:
+    if x_o > 100:
+        x_o *= 5
+        print(x_o)
+
+print(new_x)
+
+agents = [ {'name': 'A1', 'active': True, 'energy': 75},
+           {'name': 'A2', 'active': False, 'energy': 90},
+           {'name': 'A3', 'active': True, 'energy': 40},
+           {'name': 'A4', 'active': True, 'energy': 60} ]
+active_agents = list(map(lambda x : x['name'], filter(
+    lambda x: x['active'] and x['energy'] > 50, agents)))
+print(active_agents)
