@@ -138,3 +138,71 @@ def make_pizza(size, *toppings):
 make_pizza(16, "pepperoni")
 make_pizza(14, "mushrooms", "green peppers", "extra cheese")
 
+#Arbitrary Keyword Argument
+def build_profile(first, last, **user_info):
+    #1. Build a dictionary containing everything
+    # we know about the user
+    profile = {}
+    profile['first_name'] = first
+    profile['last_name'] = last
+    for key, value in user_info.items():
+        profile[key] = value
+    return profile
+
+user_profile = build_profile("Pat", "Laima",
+                             location= "Cairo",
+                             occupation= "Engineer" )
+print(user_profile)
+
+#Arbitrary Keyword Argument
+#Basically trying to use user input to fill in the dictionary
+#def build_prof(first, last, **user_info):
+    #1. Build a dictionary containing everything
+    # we know about the user
+    # double * means we can add as much user information to
+    # the dictionary as possible
+#   profile = {}
+#    profile['first_name'] = input("Enter Firstname: ")
+#    profile['last_name'] = input("Enter Lastname: ")
+#    profile['location'] = input("Enter location: ")
+#    profile['occupation'] = input("Enter occupation: ")
+    
+#    for key, value in user_info.items():
+#        profile[key] = value
+
+#    return profile
+
+#user_profile = build_prof("Pat", "Laima")
+#print(user_profile)
+
+
+
+def sandwich():
+    toppings = []
+    print("\nEnter 'q' to quit.")
+
+    while True:
+        tops = input("Enter a topping: ")
+        
+        if tops == "q":
+            break
+        toppings.append(tops)
+
+    return toppings
+
+my_order = sandwich()
+print(f"Your sandwich toppings : {my_order}")
+
+def cars(manufacturer, model, **other_infor):
+    car_info = {}
+    car_info['manufacturer'] = manufacturer
+    car_info['model'] = model
+
+    for key, value in other_infor.items():
+        car_info[key] = value
+
+    return car_info
+
+my_car = cars("Ford", "F-150", colour= 'dark blue',
+              roadworthy = "Yes", tow_package = "True")
+print(my_car)
