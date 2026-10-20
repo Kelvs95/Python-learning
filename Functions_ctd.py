@@ -134,9 +134,9 @@ def make_pizza(size, *toppings):
 
     for topping in toppings:
         print("- " + topping)
-
-make_pizza(16, "pepperoni")
-make_pizza(14, "mushrooms", "green peppers", "extra cheese")
+if __name__ == "__main__":
+    make_pizza(16, "pepperoni")
+    make_pizza(14, "mushrooms", "green peppers", "extra cheese")
 
 #Arbitrary Keyword Argument
 def build_profile(first, last, **user_info):
@@ -190,8 +190,8 @@ def sandwich():
 
     return toppings
 
-my_order = sandwich()
-print(f"Your sandwich toppings : {my_order}")
+#my_order = sandwich()
+#print(f"Your sandwich toppings : {my_order}")
 
 def cars(manufacturer, model, **other_infor):
     car_info = {}
@@ -205,4 +205,8 @@ def cars(manufacturer, model, **other_infor):
 
 my_car = cars("Ford", "F-150", colour= 'dark blue',
               roadworthy = "Yes", tow_package = "True")
-print(my_car)
+#print(my_car)
+
+
+#Storing functions in a Module
+
